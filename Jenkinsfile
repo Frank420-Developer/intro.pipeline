@@ -23,7 +23,7 @@ pipeline {
         sh 'echo "Un paso sencillo de una linea"'
         sh '''
            echo "Pasos multilinea"
-           cd /wtmp
+           cd /atmp
            ls -lrt
            '''
       }
@@ -71,7 +71,7 @@ pipeline {
     }
 
     failure {
-      echo 'Ocurrio un error'
+      mail(to: 'fvera@na-at.com.mx', subject: 'Error en el pipeline del ejercicio del curso de docker.', body: 'Cuerpo del correo')
     }
 
     aborted {
