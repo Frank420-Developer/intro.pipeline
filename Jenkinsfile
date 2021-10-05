@@ -23,7 +23,7 @@ pipeline {
         sh 'echo "Un paso sencillo de una linea"'
         sh '''
            echo "Pasos multilinea"
-           cd /atmp
+           cd /tmp
            ls -lrt
            '''
       }
@@ -36,8 +36,11 @@ pipeline {
     }
 
     stage('test: functional') {
+      when {
+        branch 'test'
+      }
       steps {
-        sh 'echo "test: functional"'
+        sh 'echo "Ejecucion de pruebas en rama test"'
       }
     }
 
