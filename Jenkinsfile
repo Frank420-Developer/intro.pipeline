@@ -23,7 +23,7 @@ pipeline {
         sh 'echo "Un paso sencillo de una linea"'
         sh '''
            echo "Pasos multilinea"
-           cd /tmp
+           cd /wtmp
            ls -lrt
            '''
       }
