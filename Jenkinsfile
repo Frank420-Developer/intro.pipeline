@@ -32,6 +32,7 @@ pipeline {
     stage('test: integration y calidad') {
       steps {
         sh 'echo "test: integration y calidad"'
+        sh 'pwd'
         sh './myscript.sh'
       }
     }
